@@ -136,7 +136,7 @@ const cards = [
   transform: translateX(-50%);
   left: 50%;
   color: #fff;
-  top: 50%;
+  top: 400px;
 }
 .result {
   display: flex;
@@ -151,4 +151,5 @@ const cards = [
   width: 8em;
   height: 8em;
 }
+
 </style>
