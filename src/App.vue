@@ -37,7 +37,7 @@ const back = () => {
 <template>
   <div class="wrapper">
     <template v-if="isShowCards">
-      <Carousel :itemsToShow="1.5" :wrapAround="true" :transition="500">
+      <Carousel :itemsToShow="1.5" :wrapAround="true" :transition="500" :autoplay="1000">
         <Slide v-for="(card, index) in cards" :key="index">
           <div class="carousel__item">
             <div>
@@ -138,7 +138,7 @@ const back = () => {
   transform: translateX(-50%);
   left: 50%;
   color: #fff;
-  top: 400px;
+  top: 450px;
 }
 .result {
   display: flex;
