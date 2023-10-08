@@ -9,6 +9,14 @@ const STATUS = {
   RESULT: "result",
   DETAIL: "detail"
 };
+const cards = [
+  { title: "一起看电影", img: "kandianying" },
+  { title: "一起坐摩天轮", img: "motianlun" },
+  { title: "一起压马路", img: "yamalu" },
+  { title: "一起养一条小狗", img: "keji" },
+  { title: "一起去教堂", img: "jiaotang" },
+  { title: "一起看日出日落", img: "richu" }
+];
 let pageStatus = ref(STATUS.INIT);
 const isShowCards = computed(() => pageStatus.value == STATUS.INIT);
 const isShowLoading = computed(() => pageStatus.value == STATUS.LOADING);
@@ -18,19 +26,13 @@ const handleStart = () => {
   pageStatus.value = STATUS.LOADING;
   setTimeout(() => {
     pageStatus.value = STATUS.RESULT;
-    resultIndex.value = Math.floor(Math.random() * 3);
+    resultIndex.value = Math.floor(Math.random() * cards.length);
   }, 2000);
 };
 
 const back = () => {
   pageStatus.value = STATUS.INIT;
 };
-
-const cards = [
-  { title: "一起看电影", img: "kandianying" },
-  { title: "一起坐摩天轮", img: "motianlun" },
-  { title: "一起压马路", img: "yamalu" }
-];
 </script>
 <template>
   <div class="wrapper">
@@ -58,10 +60,10 @@ const cards = [
         <div class="carousel__item">
           <div>
             <SvgIcon
-              :iconName="'icon-'+cards[resultIndex]?.img"
+              :iconName="'icon-' + cards[resultIndex]?.img"
               class="carousel__item-icon"
             ></SvgIcon>
-            <div>{{cards[resultIndex]?.title}}</div>
+            <div>{{ cards[resultIndex]?.title }}</div>
           </div>
         </div>
       </div>
@@ -151,5 +153,4 @@ const cards = [
   width: 8em;
   height: 8em;
 }
-
 </style>
