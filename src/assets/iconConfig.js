@@ -6,6 +6,41 @@ export default {
     "description": "",
     "glyphs": [
         {
+            "icon_id": "3888064",
+            "name": "一起跨年",
+            "font_class": "hongdenglong-xiankuang",
+            "unicode": "e616",
+            "unicode_decimal": 58902
+        },
+        {
+            "icon_id": "5219897",
+            "name": "一起放风筝",
+            "font_class": "fengzheng",
+            "unicode": "e604",
+            "unicode_decimal": 58884
+        },
+        {
+            "icon_id": "5440896",
+            "name": "一起露营",
+            "font_class": "louying",
+            "unicode": "e6d3",
+            "unicode_decimal": 59091
+        },
+        {
+            "icon_id": "17893027",
+            "name": "一起看樱花",
+            "font_class": "yinghua-copy",
+            "unicode": "e60f",
+            "unicode_decimal": 58895
+        },
+        {
+            "icon_id": "36206500",
+            "name": "秋千",
+            "font_class": "qiuqian",
+            "unicode": "e700",
+            "unicode_decimal": 59136
+        },
+        {
             "icon_id": "18646796",
             "name": "一起抓娃娃",
             "font_class": "zhuawawa",
