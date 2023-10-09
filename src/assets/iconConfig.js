@@ -6,6 +6,13 @@ export default {
     "description": "",
     "glyphs": [
         {
+            "icon_id": "18646796",
+            "name": "一起抓娃娃",
+            "font_class": "zhuawawa",
+            "unicode": "e600",
+            "unicode_decimal": 58880
+        },
+        {
             "icon_id": "2882355",
             "name": "一起看演唱会",
             "font_class": "yanchanghui",
