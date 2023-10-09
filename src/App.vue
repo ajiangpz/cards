@@ -3,20 +3,19 @@ import { Carousel, Pagination, Slide } from "vue3-carousel";
 import Loading from "./components/Loading.vue";
 import "vue3-carousel/dist/carousel.css";
 import { ref, computed } from "vue";
+import iconData from "./assets/iconConfig";
 const STATUS = {
   INIT: "init",
   LOADING: "loading",
   RESULT: "result",
   DETAIL: "detail"
 };
-const cards = [
-  { title: "一起看电影", img: "kandianying" },
-  { title: "一起坐摩天轮", img: "motianlun" },
-  { title: "一起压马路", img: "yamalu" },
-  { title: "一起养一条小狗", img: "keji" },
-  { title: "一起去教堂", img: "jiaotang" },
-  { title: "一起看日出日落", img: "richu" }
-];
+const cards = iconData.glyphs.map(item => {
+  return {
+    title: item.name,
+    img: item.font_class
+  };
+});
 let pageStatus = ref(STATUS.INIT);
 const isShowCards = computed(() => pageStatus.value == STATUS.INIT);
 const isShowLoading = computed(() => pageStatus.value == STATUS.LOADING);
@@ -37,7 +36,12 @@ const back = () => {
 <template>
   <div class="wrapper">
     <template v-if="isShowCards">
-      <Carousel :itemsToShow="1.5" :wrapAround="true" :transition="500" :autoplay="1000">
+      <Carousel
+        :itemsToShow="1.5"
+        :wrapAround="true"
+        :transition="500"
+        :autoplay="1000"
+      >
         <Slide v-for="(card, index) in cards" :key="index">
           <div class="carousel__item">
             <div>
